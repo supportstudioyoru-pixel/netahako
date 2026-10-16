@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>netahako / ねたはこ</title>
+  <title>サポート — ねたはこ</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -11,6 +11,8 @@
       --muted: #555555;
       --border: #dddddd;
       --link: #0060c0;
+      --heading: #111111;
+      --qa-bg: #f7f7f7;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
@@ -19,6 +21,8 @@
         --muted: #aaaaaa;
         --border: #444444;
         --link: #6ab0f5;
+        --heading: #f0f0f0;
+        --qa-bg: #2a2a2a;
       }
     }
     :root[data-theme="dark"] {
@@ -27,6 +31,8 @@
       --muted: #aaaaaa;
       --border: #444444;
       --link: #6ab0f5;
+      --heading: #f0f0f0;
+      --qa-bg: #2a2a2a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -34,41 +40,190 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.7;
-      padding: 40px 16px;
-      max-width: 600px;
+      line-height: 1.8;
+      padding: 40px 16px 60px;
+      max-width: 640px;
       margin: 0 auto;
     }
-    h1 { font-size: 1.5rem; margin-bottom: 8px; }
-    p { color: var(--muted); margin-bottom: 24px; }
-    nav { display: flex; flex-direction: column; gap: 12px; }
-    nav a {
-      display: block;
-      color: var(--link);
-      text-decoration: none;
-      padding: 14px 16px;
+    .lang-en {
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 8px;
-      font-size: 1rem;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
-    nav a:hover { text-decoration: underline; }
+    .lang-en h2 { font-size: 0.95rem; color: var(--heading); margin-bottom: 8px; }
+    .lang-en p { color: var(--muted); margin-bottom: 6px; }
+    .lang-en a { color: var(--link); }
+    h1 {
+      font-size: 1.4rem;
+      color: var(--heading);
+      margin-bottom: 24px;
+    }
+    .contact-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+    }
+    .contact-box p { margin-bottom: 4px; font-size: 0.95rem; }
+    .contact-box a { color: var(--link); }
+    h2 {
+      font-size: 1.05rem;
+      color: var(--heading);
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    .qa-section {
+      margin-bottom: 36px;
+    }
+    .qa-section h2 {
+      margin-top: 0;
+    }
+    .qa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .qa {
+      background: var(--qa-bg);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .qa .q {
+      font-weight: bold;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .qa .q::before { content: "Q. "; }
+    .qa .a { font-size: 0.95rem; }
     footer {
-      margin-top: 48px;
+      margin-top: 40px;
       font-size: 0.85rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
       padding-top: 16px;
     }
+    footer a { color: var(--link); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <h1>netahako / ねたはこ</h1>
-  <p>思いつきを貯める、カード式ネタ帳アプリです。<br>
-  A card-based idea notebook app for writers.</p>
-  <nav>
-    <a href="privacy/">プライバシーポリシー / Privacy Policy</a>
-    <a href="support/">サポート / Support</a>
-  </nav>
-  <footer>© 2026 Studio_Yoru</footer>
+
+  <!-- English summary -->
+  <div class="lang-en">
+    <h2>Support (English summary)</h2>
+    <p>For questions or feedback about netahako, please email us.</p>
+    <p>Free to use up to 3 notebooks and 30 cards. Unlock the full version with a one-time in-app purchase. One purchase works on iPhone, iPad, and Mac with the same Apple ID.</p>
+    <p>Sync uses iCloud Drive — make sure you're signed in to the same Apple ID on all devices and that iCloud Drive is enabled.</p>
+    <p>Contact: <a href="mailto:support.studio.yoru@gmail.com">support.studio.yoru@gmail.com</a></p>
+  </div>
+
+  <h1>ねたはこ サポート</h1>
+
+  <div class="contact-box">
+    <p>ご意見・不具合の報告はメールでお気軽にどうぞ。</p>
+    <p><a href="mailto:support.studio.yoru@gmail.com">support.studio.yoru@gmail.com</a></p>
+  </div>
+
+  <div class="qa-section">
+    <h2>無料版・アプリ内課金</h2>
+    <div class="qa-list">
+
+      <div class="qa">
+        <p class="q">無料で使えますか?</p>
+        <p class="a">はい。ネタ帳3冊、カード合計30枚まで(没ネタは数えません)は無料でそのまま使えます。それ以上は、「フル機能の解除」(アプリ内課金・買い切り)が必要です。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">上限を超えたら、データは消えますか?</p>
+        <p class="a">消えません。新しいネタ帳・カードを作れなくなるだけで、閲覧・編集・コピー・削除・並べ替えは、いつでも使えます。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">解除するには?</p>
+        <p class="a">上限に達したときに出る案内画面、または設定の「フル機能の解除」から、「解除する」を押してください。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">購入はiPhone・iPad・Macで共通ですか?</p>
+        <p class="a">はい。同じ Apple ID なら、どれか1台で解除すれば、ほかの端末でも解除済みになります。ファミリー共有にも対応しています。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">機種変更や再インストールで、解除が消えました。</p>
+        <p class="a">案内画面または設定の「購入を復元」を押してください(同じ Apple ID でサインインしている必要があります)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">返金してもらえますか?</p>
+        <p class="a">返金は Apple が受け付けています(<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>)。返金されると、解除は無効になります。</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="qa-section">
+    <h2>iCloud 同期</h2>
+    <div class="qa-list">
+
+      <div class="qa">
+        <p class="q">同期するには?</p>
+        <p class="a">すべての端末で同じ Apple ID の iCloud にサインインし、iCloud Drive をオンにしてください(設定 → Apple ID → iCloud)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">同期に時間がかかります。</p>
+        <p class="a">iCloud へのアップロードのタイミングは OS が決めるため、数十秒から数分かかることがあります。設定の「他の端末の変更を今すぐ確認」で、最新の状態を取りに行けます。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">同期されません。</p>
+        <p class="a">iCloud の保存容量がいっぱいだと、アップロードができません。設定 → Apple ID → iCloud で空き容量を確認してください(ねたはこの設定に問題があるときは警告が出ます)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">データはどこに保存されますか?</p>
+        <p class="a">iCloud が使えるときは、iCloud Drive の「ねたはこ」フォルダ(「ファイル」アプリで見られます)に保存されます。Mac では、設定の「保存先」で別のフォルダを選ぶこともできます(その間は iCloud 同期は使いません)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">バックアップはありますか?</p>
+        <p class="a">自動で作成されます(1時間ごと、直近10世代)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">新しい端末にデータを移すには?</p>
+        <p class="a">同じ iCloud にサインインするだけで、自動で同期されます。ほかに、設定の「書き出し」「読み込み」(Mac は「ファイル」メニュー)でファイルとして移すこともできます。</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="qa-section">
+    <h2>使い方</h2>
+    <div class="qa-list">
+
+      <div class="qa">
+        <p class="q">カードを消してしまいました。</p>
+        <p class="a">「没ネタ」ネタ帳に避難しています(「没ネタ救済」が有効のとき)。</p>
+      </div>
+
+      <div class="qa">
+        <p class="q">カードの並び順が他の端末に反映されません。</p>
+        <p class="a">カードの手動の並べ替えは、端末ごとの並びです(カードの追加・編集・削除・移動、ネタ帳の名前・色・並び順は同期されます)。</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <a href="../">← ねたはこ トップ</a>
+    &nbsp;·&nbsp; © 2026 Studio_Yoru
+  </footer>
+
 </body>
 </html>
